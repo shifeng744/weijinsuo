@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width:600px;
+            height:350px;
+            border:2px solid #ccc;
+            /*position: relative;相对自己定位*/
+           /* position: absolute;!*是相对父级定位 如果没有父级 是相对body定位  有父级 有relative 它就相对于父*!*/
+            margin-left: 50px;
+            position: relative;
+        }
+        .box a{
+            width:30px;
+            display: block;
+            height: 60px;
+            background-color: #ccc;
+        }
+
+        .box a:nth-child(1){
+            position: absolute;
+            background-color: red;
+            z-index: 2;
+        }
+        .box a:nth-child(2){
+            position: absolute;
+            background-color: blue;
+            z-index: 3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+
+        <a>左边</a>
+        <a>右边</a>
+
+    </div>
+</body>
+</html>
